@@ -32,7 +32,7 @@ while (i > 0)
 _putchar(buffer[--i]);
 }
 }
-else if (buffer[0] == '0')
+else if (buffer[size] == '0')
 {
 for (j = 0; j < size; j++)
         decimal = decimal * 8 + (buffer[j] - '0');
