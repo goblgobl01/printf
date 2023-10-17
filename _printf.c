@@ -33,6 +33,8 @@ for (i = 0; i < size; i++)
 			length += s_directive(va_arg(arg_list, const char *));
 		else if (format[i + 1] == '%')
 			length += por_directive('%');
+		else if (format[i + 1] == 'd')
+			length += d_directive(va_arg(arg_list, int));
 		else
 		{
 			length += 1;
