@@ -16,5 +16,6 @@ int por_directive(char c);
 int _putchar(char c);
 int str_len(const char *string);
 int d_directive(int argument);
+int b_directive(int argument);
 
 #endif

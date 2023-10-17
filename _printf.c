@@ -31,6 +31,8 @@ for (i = 0; i < size; i++)
 			length += por_directive('%');
 		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 			length += d_directive(va_arg(arg_list, int));
+		else if (format[i + 1] == 'b')
+			length += b_directive(va_arg(arg_list, int));
 		else
 		{
 			length += 1;
