@@ -2,7 +2,7 @@
 
 int main()
 {
-	 _printf("%d\n", 012);
+	 _printf("%d %i\n",0x1f,0x1f);
 
 return(0);
 }

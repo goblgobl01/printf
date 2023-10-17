@@ -14,15 +14,11 @@ int i, length = 0, size;
 
 va_list arg_list;
 va_start(arg_list, format);
-
 size = str_len(format);
-
 if (!format || !format[0])
 	return (-1);
 if (format[0] == '%' && format[1] == ' ')
 	return (-1);
-
-
 for (i = 0; i < size; i++)
 {
 	if (format[i] == '%')
@@ -33,7 +29,7 @@ for (i = 0; i < size; i++)
 			length += s_directive(va_arg(arg_list, const char *));
 		else if (format[i + 1] == '%')
 			length += por_directive('%');
-		else if (format[i + 1] == 'd')
+		else if (format[i + 1] == 'd' || format[i + 1] == 'i')
 			length += d_directive(va_arg(arg_list, int));
 		else
 		{
@@ -47,9 +43,6 @@ for (i = 0; i < size; i++)
 		_putchar(format[i]);
 		length += 1;
 	}
-
 }
-
 return (length);
-
 }
